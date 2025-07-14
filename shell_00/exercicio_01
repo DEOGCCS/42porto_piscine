@@ -1,6 +1,12 @@
 mkdir ex00/
 cd ex00/
-mac > z
+mac > z.txt
 Z
-git add
-git 
+pwd #para confirmar o de estou
+ls # para confirmr os ficheiroa existente no diretorio
+ls -la #para confirmar tudo
+
+git add z.txt
+git status
+git commit
+git push
