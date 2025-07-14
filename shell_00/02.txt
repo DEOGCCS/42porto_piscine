@@ -1,0 +1,10 @@
+mkdir ex01/
+mac > testShell00.tar
+ls -l
+
+tar -cf testShell00.tar testShell00
+
+git add ficheiro criado 
+git status
+git commit
+git push
