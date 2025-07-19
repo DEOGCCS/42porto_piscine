@@ -9,5 +9,4 @@ int  main(void)
   c = 'c';
 
   write(1, &c, 1);
-  retorn (0);
 }
