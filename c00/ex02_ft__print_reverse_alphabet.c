@@ -4,12 +4,12 @@ void ft_print_alphabet(void);
 
 int  main()
 {
-  char Z;
+  char z;
 
-  Z = 'Z';
-  while( Z >= 'A')
+  z = 'z';
+  while( z >= 'a')
   {
-  write ( 1, &Z, 1);
-  Z--;
+  write ( 1, &z, 1);
+  z--;
   }
 }
