@@ -4,14 +4,15 @@ void    ft_print_comb(void);
 
 int     array(int n)
 {
-        char numb[4];
+        char numb[5];
         
         numb[0] = '0' + (n / 100);
         numb[1] = '0' + (n / 10 % 10);
         numb[2] = '0' + (n % 10);
-        numb[3] = ' ';
+        numb[3] = ',';
+        numb[4] = ' ';
         
-        write(1, numb, 4);
+        write(1, numb, 5);
 }
     
 int     main(void) 
