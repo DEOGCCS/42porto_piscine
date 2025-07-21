@@ -1,0 +1,28 @@
+#include <unistd.h>
+
+void	ft_print_comb(void)
+{
+    int        n;
+        
+    char numb[5];
+        
+    numb[0] = '0' + (n / 100);
+    numb[1] = '0' + (n / 10 % 10);
+    numb[2] = '0' + (n % 10);
+    numb[3] = ',';
+    numb[4] = ' ';
+    
+    while (n >= 0 && n <=789)
+    {
+    if(numb[0] != numb[1] && numb[0] != numb[2] && numb[1] != numb[2])
+        {
+        write(1, n, 5);
+        }
+    }    
+}
+
+int main()
+{
+    ft_print_comb();
+    return(0);
+}
