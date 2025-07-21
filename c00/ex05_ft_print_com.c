@@ -17,7 +17,7 @@ int     array(int n)
     
 int     main(void) 
 {
-        for(int c = 0; c <= 999; c++)
+        for(int c = 0; c <= 789; c++)
         {
                         int a = c / 100;
                         int b = ( c / 10) % 10;
