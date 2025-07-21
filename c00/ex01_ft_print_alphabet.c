@@ -1,15 +1,19 @@
 #include <unistd.h>
 
-void ft_print_alphabet(void);
-
-int  main()
+void	ft_print_alphabet(void)
 {
-  char a;
+	char	x;
 
-  a = 'a';
-  while( a <= 'z')
-  {
-  write ( 1, &a, 1);
-  a++;
-  }
+	x = ('a');
+	while (x <= 'z')
+	{
+		write (1, &x, 1);
+		x++;
+	}
 }
+//
+//int	main(void)
+//{
+//	ft_print_alphabet();
+//	return (0);
+//}
