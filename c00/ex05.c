@@ -1,22 +1,33 @@
 #include <unistd.h>
 
-int ft_print_comb(void)
+int	ft_print_comb(void)
 {
-    int    numb[3] <= 789;
+	char	i[3];
 
-    numb[0] = numb[0] >= 0 && numb[0] <= 7;
-    numb[1] = numb[1] >= 0 && numb[0] <= 8;
-    numb[2] = numb[0] >= 2 && numb[0] <= 9;
-
-    if ( numb[0] <= 7 && numb[1] <= 8 && numb[2] <= 9)
-    {
-        write(1, &numb, 3);
-        numb++
-    }
+	i[0] = '0';
+	while (i[0] <= '7')
+	{
+		i[1] = i[0] + 1;
+		while (i[1] <= '8')
+		{
+			i[2] = i[1] + 1;
+			while (i[2] <= '9')
+			{
+				write (1, i, 3);
+				i[2]++;
+				if (!(i[0] == '7' && i[1] == '8' && i[2] == '9'))
+				{
+					write (1, ", ", 2);
+				}
+			}
+			i[1]++;
+		}
+		i[0]++;
+	}
 }
 
-int main()
+int	main(void)
 {
-    ft_print_comb();
-    return(0);
+	ft_print_comb();
+	return (0);
 }
