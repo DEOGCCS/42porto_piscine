@@ -1,7 +1,6 @@
-
 #include <unistd.h>
 
-int	ft_print_comb(void)
+void	ft_print_comb(void)
 {
 	char	i[3];
 
@@ -15,11 +14,11 @@ int	ft_print_comb(void)
 			while (i[2] <= '9')
 			{
 				write (1, i, 3);
-				i[2]++;
-				if (!(i[0] == '7' && i[1] == '8' && i[2] == '9'))
+				if (!(i[0] == '7'))
 				{
 					write (1, ", ", 2);
 				}
+				i[2]++;
 			}
 			i[1]++;
 		}
