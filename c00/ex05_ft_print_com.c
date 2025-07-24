@@ -15,9 +15,7 @@ void	ft_print_comb(void)
 			{
 				write (1, i, 3);
 				if (!(i[0] == '7'))
-				{
 					write (1, ", ", 2);
-				}
 				i[2]++;
 			}
 			i[1]++;
@@ -25,9 +23,10 @@ void	ft_print_comb(void)
 		i[0]++;
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_print_comb();
 	return (0);
 }
+*/
