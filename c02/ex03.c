@@ -19,8 +19,8 @@ int     ft_str_is_numeric(char *str)
 
 int     main()
 {
-        printf("%d", ft_str_is_numeric("1234567890"));
-        printf("%d", ft_str_is_numeric("abc"));
-        printf("%d", ft_str_is_numeric(""));
+        printf("%d\n", ft_str_is_numeric("1234567890"));
+        printf("%d\n", ft_str_is_numeric("abc"));
+        printf("%d\n", ft_str_is_numeric(""));
         return(0);
 }
