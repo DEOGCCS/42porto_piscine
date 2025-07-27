@@ -20,10 +20,9 @@ int ft_str_is_alpha(char *str)
 
 int      main()
 {
-    char *a;
-    a = "Aleluia";
-
-    ft_str_is_alpha(a);
+    ft_str_is_alpha("aleluia");
+    ft_str_is_alpha("12345");
+    ft_str_is_alpha("");
 
     return(0);
     }
