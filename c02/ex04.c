@@ -18,9 +18,9 @@ int     ft_str_is_lowercase(char *str)
 
 int     main()
 {
-        printf("%d", ft_str_is_lowercase("asdf"));
-        printf("%d", ft_str_is_lowercase("ASF"));
-        printf("%d", ft_str_is_lowercase("124"));
-        printf("%d", ft_str_is_lowercase(""));
+        printf("%d\n", ft_str_is_lowercase("asdf"));
+        printf("%d\n", ft_str_is_lowercase("ASF"));
+        printf("%d\n", ft_str_is_lowercase("124"));
+        printf("%d\n", ft_str_is_lowercase(""));
         return(0);
 }
