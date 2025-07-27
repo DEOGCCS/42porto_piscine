@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <stdio.h>
 
 int ft_str_is_alpha(char *str)
 {
@@ -9,20 +9,18 @@ int ft_str_is_alpha(char *str)
     {
         if (!(str[i] >= 'A' && str[i] <= 'Z' || str[i] >= 'a' && str[i] <= 'z'))
         {
-            write ( 1, "0", 1);
             return (0);
         }
         i++;
     }
-    write (1,"1",1);
     return (1);
 }
 
 int      main()
 {
-    ft_str_is_alpha("aleluia");
-    ft_str_is_alpha("12345");
-    ft_str_is_alpha("");
+    printf("%d\n", ft_str_is_alpha("aleluia"));
+    printf("%d\n", ft_str_is_alpha("12345"));
+    printf("%d\n", ft_str_is_alpha(""));
 
     return(0);
     }
