@@ -7,7 +7,8 @@ int ft_str_is_alpha(char *str)
     i = 0;
     while (str[i])
     {
-        if (!(str[i] >= 'A' && str[i] <= 'Z' || str[i] >= 'a' && str[i] <= 'z'))
+        if (!((str[i] >= 'A' && str[i] <= 'Z') || 
+            (str[i] >= 'a' && str[i] <= 'z')))
         {
             return (0);
         }
@@ -19,8 +20,8 @@ int ft_str_is_alpha(char *str)
 int      main()
 {
     printf("%d\n", ft_str_is_alpha("aleluia"));
+    printf("%d\n", ft_str_is_alpha("ALEluia"));
     printf("%d\n", ft_str_is_alpha("12345"));
     printf("%d\n", ft_str_is_alpha(""));
-
     return(0);
-    }
+}
