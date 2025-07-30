@@ -1,1 +1,34 @@
+ft utils: ferramentas - put char, put str, print da grid.
 
+putchar imprime um caracter individual.
+
+putstr essencialmente um strlen com um putchar dentro para imprimir cada caracter individualmente somando mais 1 ao index apos a impressao, para ir imprimindo ate chegar ao final da string.
+
+print da grid [4][4]; imprime 4 rows, indice de 0 a 3 (0,1,2,3) com 4 espacos cada row.
+ou seja r0 {0,1,2,3}
+    r1 {0,1,2,3}    referimos virtualmente aos espacos dentro das rows como colunas
+    r2 {0,1,2,3}    col 0, 1, 2, 3 respectivamente.
+    r3 {0,1,2,3}
+
+Dizemos que enquanto o valor da row, comecando pela zero for menor que 4, e enquanto isto c for menor que 4 damos a nossa varivel digito a nossa grid em [r] [c] row e colunas e somamos '0' para passar o valor que vamos imprimir nas nossas celulas para ascii.
+
+Chamamos a funcao putchar de digit, para imprimir o numero correspondente no index de c na row de index r.
+
+Olhando para o nosso main, vemos que estamos a usar argc e **argv
+
+como demos o valor de 16 as nossas clues, com a funcao parse_input ela passa os numeros da string e converte-os e simultaneamente conta o numero de clues, se o num count for inferior ou superior a 16 (numero de clues) o argv retorna diferente das clues e imprime uma mensagem de erro.
+
+ja o argc, considera o nosso input de 16 numeros uma so string o que passa como 1 argumento e retribui um 2 que quer dizer que esta tudo ok. se dermos mais que uma string, e mais que 1 argumento, nao retribui 2 e imprime erro
+
+apos feitas estas verificacoes, chama-mos a grid inicial e passamos os valores da grid e de clues para a nossa funcao solve, e depois chamamos a funcao print grid para efectivamente imprimir a solucao.
+
+Indo entao para a nossa funcao solve.
+Verificamos entao com o nosso cell_index qual a celula a preencher dividindo o seu valor e o resto para verificarmos as cordenadas da celula que estamos a preencher.
+Definimos o valor de height pra 1; que e o valor minimo que a celula pode ter e enquanto for menor ou igual a 4 vamos verificar se o lugar atribuido foi valido com a funcao is_valid_placement e atribuimos o valor da altura a dada posicao da row/coluna. E se a posicao for valida soma 1 ao cell index e volta para cima para verificar a proxima posicao e assim sucessivamente.
+Caso a posicao seja invalida, soma +1 ao valor da altura e volta a correr o codigo while height <=4.
+
+na condicao is valid placement estamos a verificr se primeiro enquanto i < col se o numero que la colocamos se repete pela coluna e no i < row verificamos se o numero se repete, porque o numero nao pode ser repetido. Se tudo se verifica ele da returna 1, caso contrario retorna 0 porque e invalido.
+
+Se o numero de celulas preenchido e igual a 16 e se assim for vamos verificar as clues todas. Verificamos as colunas fazendo um array temporario de tamanho 4 {0,1,2,3} e atribuimos o valos de 0 ao i e enquanto i for menor que 4, atribuimos o valor de 0 a j. Enquanto isto guardamos o valor de j na array temporaria enquanto ele verifica todas os valores da coluna 0 e vai aumentando a jota para verificar e guardar o numero da coluna 0 da row seguinte. Apos j chegar a 4 somamos 1 ao valor de i para ele voltar a analizar os numeros da coluna seguinte e damos reset ao j e assim sucessivamente ate i chegar a 4.
+
+Fazemos o mesmo para as rows, so trocamos o j para a o outro array e o i para o primeiro.
