@@ -7,14 +7,20 @@ void  ft_putchar(char c)
 
 void  ft_putnbr(int nbr)
 {
-  if (nbr >= 0 && nbr <= 9)
+  if (nbr == -2147483648)
   {
-    ft_putchar(nbr + '0');
+    ft_putchar('-');
+    ft_putchar('2');
+    ft_putnbr(147483648);
   }
   else if (nbr < 0)
   {
     ft_putchar('-');
     ft_putnbr(nbr * (-1));
+  }
+  else if (nbr >= 0 && nbr <= 9)
+  {
+    ft_putchar(nbr + '0');
   }
   else
   {
@@ -29,7 +35,7 @@ int  main(void)
   ft_putchar('\n');
   ft_putnbr(-1234);
   ft_putchar('\n');
-  ft_putnbr(-2147483647);
+  ft_putnbr(-2147483648);
   ft_putchar('\n');
   ft_putnbr(2147483647);
   ft_putchar('\n');
