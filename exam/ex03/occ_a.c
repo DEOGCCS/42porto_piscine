@@ -7,13 +7,13 @@ int occ_a(char *str)
   
   while (str[i] != '\0')
   {
-    if (str[i] == 'A')
+    if (str[i] == 'A'). //selects the 'A' character.
     {
-      nb++;
+      nb++; //runs the count of A character
     }
-    i++;
+    i++; //runs the string
   }
-  return(nb);
+  return(nb); // returns the total number of A characters 
 }
 
 int main(void)
