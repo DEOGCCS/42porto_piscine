@@ -1,4 +1,4 @@
-#include <stdio.h>
+//#include <stdio.h>
 
 int occ_a(char *str)
 {
@@ -15,10 +15,10 @@ int occ_a(char *str)
   }
   return(nb); // returns the total number of A characters 
 }
-
+/*
 int main(void)
 {
 char *str = "pirnt a e A A";
 printf("%d", occ_a(str));
 return (0);
-}
+}*/
